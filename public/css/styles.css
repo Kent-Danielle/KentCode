@@ -1,0 +1,107 @@
+:root {
+	/* CSS HEX 
+	--baby-powder: #f9f7f3ff;
+	--safety-orange: #f77700ff;
+	--gunmetal: #143642ff;
+	--dark-orange: #ff8b1fff;
+	--eerie-black: #1a1a1dff;
+  */
+
+	/* CSS HSL */
+	--light-primary: hsla(40, 33%, 96%, 1);
+	--light-carbon: hsla(29, 100%, 48%, 1);
+	--light-primary-text: hsla(240, 5%, 11%, 1);
+	--light-secondary-text: rgb(56, 56, 59);
+	--accent: rgba(4, 89, 120, 0.85);
+	--dark-carbon: hsla(29, 100%, 56%, 1);
+	--dark-primary: hsla(240, 5%, 11%, 1);
+	--dark-primary-text: rgb(251, 250, 245);
+}
+
+@font-face {
+	font-family: Couture;
+	src: url("/public/fonts/couture-bld.otf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: var(--light-primary);
+	color: var(--light-primary-text);
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+	display: flex;
+	padding: 1rem;
+	justify-items: flex-end;
+	align-items: center;
+}
+
+nav a {
+	font-family: Couture, sans-serif;
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin: 0 1rem;
+}
+
+nav #logo {
+	font-family: Couture, sans-serif;
+	font-size: 1.2rem;
+	margin-right: auto;
+}
+
+/* Landing page */
+
+#landing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(100vh - (2rem + 1.2rem));
+	width: 100%;
+	padding: 0 8rem;
+}
+
+#landing-text * {
+  width: fit-content;
+}
+
+#landing-text {
+	margin: 0 0 6rem;
+	width: fit-content;
+}
+
+#landing p {
+	font-family: Overpass, sans-serif;
+	font-size: 1.2rem;
+	margin-right: 3rem;
+  font-weight: 600;
+  color: var(--light-secondary-text)
+}
+
+#landing h1 {
+	font-family: Couture, sans-serif;
+	font-size: 4rem;
+	color: var(--light-carbon);
+}
+
+#landing h2 {
+	font-family: Couture, sans-serif;
+	font-size: 2rem;
+  color: var(--accent)
+}
+
+#landing .flavor-text {
+	width: 30%;
+	margin-top: 5px;
+}
