@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
 	/* CSS HEX 
 	--baby-powder: #f9f7f3ff;
@@ -12,7 +16,7 @@
 	--light-carbon: hsla(29, 100%, 48%, 1);
 	--light-primary-text: hsla(240, 5%, 11%, 1);
 	--light-secondary-text: rgb(56, 56, 59);
-	--accent: rgba(4, 89, 120, 0.85);
+	--accent: rgb(0, 38, 52);
 	--dark-carbon: hsla(29, 100%, 56%, 1);
 	--dark-primary: hsla(240, 5%, 11%, 1);
 	--dark-primary-text: rgb(251, 250, 245);
@@ -20,10 +24,9 @@
 
 @font-face {
 	font-family: Couture;
-	src: url("/public/fonts/couture-bld.otf");
+	src: url("/src/fonts/couture-bld.otf");
 }
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
 	margin: 0;
 	padding: 0;
@@ -34,25 +37,25 @@ html {
 }
 
 body {
-	background-color: var(--light-primary);
+	background: var(--light-primary);
 	color: var(--light-primary-text);
-	min-height: 100%;
-	overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.section {
+  height: calc(100vh);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Navbar */
 nav {
-	display: flex;
-	padding: 1rem;
-	justify-items: flex-end;
-	align-items: center;
+	background: var(--light-primary);
 }
 
 nav a {
 	font-family: Couture, sans-serif;
-	font-weight: 600;
-	font-size: 1.2rem;
-	margin: 0 1rem;
 }
 
 nav #logo {
@@ -64,16 +67,11 @@ nav #logo {
 /* Landing page */
 
 #landing {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: calc(100vh - (2rem + 1.2rem));
-	width: 100%;
-	padding: 0 8rem;
+	background-color: var(--light-primary);
 }
 
 #landing-text * {
-  width: fit-content;
+	width: fit-content;
 }
 
 #landing-text {
@@ -82,26 +80,38 @@ nav #logo {
 }
 
 #landing p {
-	font-family: Overpass, sans-serif;
-	font-size: 1.2rem;
+	font-family: "Rubik", sans-serif;
+	font-size: 1.3rem;
 	margin-right: 3rem;
-  font-weight: 600;
-  color: var(--light-secondary-text)
+	font-weight: 600;
+	color: var(--light-secondary-text);
 }
 
 #landing h1 {
 	font-family: Couture, sans-serif;
 	font-size: 4rem;
+	line-height: 3.5rem;
 	color: var(--light-carbon);
 }
 
 #landing h2 {
 	font-family: Couture, sans-serif;
 	font-size: 2rem;
-  color: var(--accent)
+	color: var(--accent);
 }
 
 #landing .flavor-text {
 	width: 30%;
 	margin-top: 5px;
+}
+
+/* Projects */
+#projects {
+
+	background: var(--accent);
+}
+
+/* Skills */
+#skills {
+	background-color: var(--light-primary);
 }
