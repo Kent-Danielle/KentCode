@@ -9,15 +9,16 @@
 	</head>
 	<body>
 		<div class="flex flex-col items-center">
+			<!-- Navbar -->
 			<nav
-				class="flex p-4 justify-end items-center w-full fixed max-w-screen-2xl"
+				class="z-20 flex p-4 justify-end items-center w-full fixed max-w-screen-2xl"
 			>
 				<h1 id="logo" class="mx-8">CantCode</h1>
 				<a class="font-semibold text-lg my-0 mx-8">Projects</a>
 				<a class="font-semibold text-lg my-0 mx-8">Skills</a>
 				<a class="font-semibold text-lg my-0 mx-8">Contact</a>
 			</nav>
-
+			<!-- Hero section -->
 			<div
 				id="landing"
 				class="section flex flex-col justify-center h-screen w-full max-w-screen-2xl px-20"
@@ -28,11 +29,82 @@
 					<h2>a software developer</h2>
 				</div>
 			</div>
-
+			<!-- Projects section -->
 			<div
 				id="projects"
-				class="flex flex-col justify-center h-screen w-full max-w-screen-2xl px-20"
-			></div>
+				class="flex flex-col justify-center h-screen w-full max-w-screen-2xl px-20 py-3"
+			>
+				<h1 class="text-6xl pb-6 w-fit mb-auto self-center">Projects</h1>
+
+				<!-- Project carousel -->
+				<div class="carousel w-full h-full relative">
+					<button
+						id="carousel_button-left"
+						class="z-10 carousel__button absolute top-1/2 -left-14"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="white"
+							class="w-6 h-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15.75 19.5L8.25 12l7.5-7.5"
+							/>
+						</svg>
+					</button>
+					<div class="carousel__track-container w-full h-full relative">
+						<ul class="carousel__track w-full h-full m-0 p-0 list-none">
+							<li
+								class="carousel__slide w-full h-full absolute top-0 bottom-0"
+							></li>
+							<li
+								class="carousel__slide w-full h-full absolute top-0 bottom-0"
+							></li>
+							<li
+								class="carousel__slide w-full h-full absolute top-0 bottom-0"
+							></li>
+						</ul>
+					</div>
+					<button
+						id="carousel_button-right"
+						class="z-10 carousel__button absolute top-1/2 -right-14"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="white"
+							class="w-6 h-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M8.25 4.5l7.5 7.5-7.5 7.5"
+							/>
+						</svg>
+					</button>
+
+					<div
+						class="carousel__nav py-3 absolute bottom-0 left-1/2 -translate-x-1/2"
+					>
+						<button
+							class="carousel__indicator rounded-full w-4 h-4 mx-2"
+						></button
+						><button
+							class="carousel__indicator rounded-full w-4 h-4 mx-2"
+						></button
+						><button
+							class="carousel__indicator rounded-full w-4 h-4 mx-2"
+						></button>
+					</div>
+				</div>
+			</div>
 
 			<div
 				id="skills"

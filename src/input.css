@@ -107,8 +107,22 @@ nav #logo {
 
 /* Projects */
 #projects {
-
 	background: var(--accent);
+}
+
+#projects h1 {
+	font-family: Couture, sans-serif;
+	color: var(--light-carbon);
+}
+
+/* Project Carousel */
+.carousel__button {
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+.carousel__indicator {
+	background-color: var(--light-carbon);
 }
 
 /* Skills */
