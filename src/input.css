@@ -39,11 +39,11 @@ html {
 body {
 	background: var(--light-primary);
 	color: var(--light-primary-text);
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 .section {
-  height: calc(100vh);
+	height: calc(100vh);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -116,6 +116,66 @@ nav #logo {
 }
 
 /* Project Carousel */
+@keyframes enterRight {
+	from {
+		transform: translateX(7rem);
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes exitRight {
+	from {
+		opacity: 100%;
+	}
+	to {
+		transform: translatex(-7rem);
+		opacity: 0%;
+	}
+}
+
+@keyframes enterLeft {
+	from {
+		transform: translateX(-7rem);
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes exitLeft {
+	from {
+		opacity: 100%;
+	}
+	to {
+		transform: translatex(7rem);
+		opacity: 0%;
+	}
+}
+
+.enter-right {
+	animation-name: enterRight;
+	animation-duration: 0.3s;
+}
+
+.exit-right {
+	animation-name: exitRight;
+	animation-duration: 0.3s;
+}
+
+.enter-left {
+	animation-name: enterLeft;
+	animation-duration: 0.3s;
+}
+
+.exit-left {
+	animation-name: exitLeft;
+	animation-duration: 0.3s;
+}
+
 .carousel__button {
 	cursor: pointer;
 	transform: translateY(-50%);
@@ -123,6 +183,14 @@ nav #logo {
 
 .carousel__indicator {
 	background-color: var(--light-carbon);
+}
+
+li.current-slide {
+	display: list-item;
+}
+
+button.current-slide {
+	opacity: 100%;
 }
 
 /* Skills */

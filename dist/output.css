@@ -587,10 +587,6 @@ video {
   left: 50%;
 }
 
-.right-1\/2 {
-  right: 50%;
-}
-
 .z-20 {
   z-index: 20;
 }
@@ -618,25 +614,16 @@ video {
   margin-right: 0.5rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .mb-auto {
   margin-bottom: auto;
 }
 
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-screen {
@@ -653,30 +640,6 @@ video {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-fit {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-max {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.h-5\/6 {
-  height: 83.333333%;
-}
-
-.min-h-full {
-  min-height: 100%;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .w-full {
@@ -730,23 +693,27 @@ video {
   align-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
-.bg-red-600 {
+.bg-red-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -762,11 +729,6 @@ video {
   padding-right: 5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -774,10 +736,6 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
-}
-
-.pb-7 {
-  padding-bottom: 1.75rem;
 }
 
 .text-lg {
@@ -792,6 +750,24 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 :root {
@@ -913,6 +889,122 @@ nav #logo {
 
 /* Project Carousel */
 
+@-webkit-keyframes enterRight {
+  from {
+    transform: translateX(7rem);
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes enterRight {
+  from {
+    transform: translateX(7rem);
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes exitRight {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    transform: translatex(-7rem);
+    opacity: 0%;
+  }
+}
+
+@keyframes exitRight {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    transform: translatex(-7rem);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes enterLeft {
+  from {
+    transform: translateX(-7rem);
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes enterLeft {
+  from {
+    transform: translateX(-7rem);
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes exitLeft {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    transform: translatex(7rem);
+    opacity: 0%;
+  }
+}
+
+@keyframes exitLeft {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    transform: translatex(7rem);
+    opacity: 0%;
+  }
+}
+
+.enter-right {
+  -webkit-animation-name: enterRight;
+          animation-name: enterRight;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+.exit-right {
+  -webkit-animation-name: exitRight;
+          animation-name: exitRight;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+.enter-left {
+  -webkit-animation-name: enterLeft;
+          animation-name: enterLeft;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+.exit-left {
+  -webkit-animation-name: exitLeft;
+          animation-name: exitLeft;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
 .carousel__button {
   cursor: pointer;
   transform: translateY(-50%);
@@ -920,6 +1012,14 @@ nav #logo {
 
 .carousel__indicator {
   background-color: var(--light-carbon);
+}
+
+li.current-slide {
+  display: list-item;
+}
+
+button.current-slide {
+  opacity: 100%;
 }
 
 /* Skills */
