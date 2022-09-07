@@ -51,7 +51,6 @@ prevBtn.addEventListener("click", (e) => {
 	const currentBtnIndex = paginationBtns.findIndex((btn) => btn === currentBtn);
 	const prevBtnIndex = (currentBtnIndex - 1).mod(paginationBtns.length);
 
-	console.log(prevSlideIndex);
 	moveToSlide(false, currentSlide, prevSlideIndex);
 	updatePagination(currentBtn, prevBtnIndex);
 });
@@ -66,7 +65,6 @@ nextBtn.addEventListener("click", (e) => {
 	const currentBtnIndex = paginationBtns.findIndex((btn) => btn === currentBtn);
 	const nextBtnIndex = (currentBtnIndex + 1) % paginationBtns.length;
 
-	console.log((0 - 1) % 3);
 	moveToSlide(true, currentSlide, nextSlideIndex);
 	updatePagination(currentBtn, nextBtnIndex);
 });

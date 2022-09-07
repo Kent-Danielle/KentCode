@@ -186,11 +186,25 @@ nav #logo {
 }
 
 li.current-slide {
-	display: list-item;
+	visibility: visible;
 }
 
 button.current-slide {
 	opacity: 100%;
+}
+
+#projects h2,
+#projects h3 {
+	font-family: Couture, sans-serif;
+	color: var(--light-carbon);
+}
+#projects h4 {
+	font-family: Couture, sans-serif;
+	color: var(--light-primary);
+}
+
+#projects p {
+	color: var(--light-primary);
 }
 
 /* Skills */
