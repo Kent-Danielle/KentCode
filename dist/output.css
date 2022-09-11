@@ -816,10 +816,6 @@ video {
   align-self: center;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -845,6 +841,7 @@ video {
   --dark-carbon: hsla(29, 100%, 56%, 1);
   --dark-primary: hsla(240, 5%, 11%, 1);
   --dark-primary-text: rgb(251, 250, 245);
+  --marquee-offset: -1372px;
 }
 
 @font-face {
@@ -1095,7 +1092,7 @@ button.current-slide {
 }
 
 div.carousel__slide img {
-  height: calc(100vh - 8rem)
+  height: calc(100vh - 8rem);
 }
 
 #projects h2,
@@ -1117,6 +1114,120 @@ div.carousel__slide img {
 
 #skills {
   background-color: var(--light-primary);
+}
+
+/* Skills Carousel */
+
+.skillbox {
+  height: 100%;
+  background: #999;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+
+.skillbox:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: blue;
+}
+
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.green {
+  background: green;
+}
+
+.marquee {
+  height: 200px;
+  width: 90%;
+  border: 2px solid #eee;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.marquee__inner {
+  display: block;
+  height: 100%;
+  position: absolute;
+}
+
+.marquee-left {
+  -webkit-animation: marquee-left 10s linear infinite;
+          animation: marquee-left 10s linear infinite;
+}
+
+.marquee-right {
+  -webkit-animation: marquee-right 10s linear infinite;
+          animation: marquee-right 10s linear infinite;
+}
+
+.marquee__inner:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.skillbox_container {
+  float: left;
+  height: 100%;
+}
+
+@-webkit-keyframes marquee-left {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: var(--marquee-offset);
+  }
+}
+
+@keyframes marquee-left {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: var(--marquee-offset);
+  }
+}
+
+@-webkit-keyframes marquee-right {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: var(--marquee-offset);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: var(--marquee-offset);
+  }
 }
 
 @media (min-width: 768px) {

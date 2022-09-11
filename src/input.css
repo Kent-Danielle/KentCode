@@ -20,6 +20,8 @@
 	--dark-carbon: hsla(29, 100%, 56%, 1);
 	--dark-primary: hsla(240, 5%, 11%, 1);
 	--dark-primary-text: rgb(251, 250, 245);
+
+	--marquee-offset: -1372px;
 }
 
 @font-face {
@@ -64,27 +66,27 @@ body {
 	}
 
 	.carousel__slide-text {
-		@apply flex h-fit w-1/2 flex-col items-start xl:py-6 xl:px-5 md:px-4;
+		@apply flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5;
 	}
 
 	.carousel__slide-text h2 {
-		@apply w-fit md:text-3xl md:pb-1 xl:pb-3 xl:text-4xl;
+		@apply w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl;
 	}
 
 	.carousel__slide-text h2 + p {
-		@apply xl:pb-6 xl:text-xl md:text-base md:pb-4;
+		@apply md:pb-4 md:text-base xl:pb-6 xl:text-xl;
 	}
 
 	.carousel__slide-text h3 {
-		@apply w-fit xl:pb-3 xl:text-3xl md:text-2xl;
+		@apply w-fit md:text-2xl xl:pb-3 xl:text-3xl;
 	}
 
 	.carousel__slide-text h4 {
-		@apply w-fit xl:text-2xl md:text-lg;
+		@apply w-fit md:text-lg xl:text-2xl;
 	}
 
 	.carousel__slide-text h4 + p {
-		@apply xl:pb-4 xl:text-lg md:text-sm md:pb-1;
+		@apply md:pb-1 md:text-sm xl:pb-4 xl:text-lg;
 	}
 }
 
@@ -243,7 +245,7 @@ button.current-slide {
 }
 
 div.carousel__slide img {
-	height: calc(100vh - 8rem)
+	height: calc(100vh - 8rem);
 }
 
 #projects h2,
@@ -263,4 +265,87 @@ div.carousel__slide img {
 /* Skills */
 #skills {
 	background-color: var(--light-primary);
+}
+
+/* Skills Carousel */
+.skillbox {
+	height: 100%;
+	background: #999;
+	display: inline-block;
+	transition: all 0.2s ease-out;
+}
+
+.skillbox:hover {
+	transform: scale(1.2);
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.red {
+	background: red;
+}
+.yellow {
+	background: yellow;
+}
+.blue {
+	background: blue;
+}
+.orange {
+	background: orange;
+}
+.purple {
+	background: purple;
+}
+.green {
+	background: green;
+}
+
+.marquee {
+	height: 200px;
+	width: 90%;
+	border: 2px solid #eee;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.marquee__inner {
+	display: block;
+	height: 100%;
+	position: absolute;
+}
+
+.marquee-left {
+	animation: marquee-left 10s linear infinite;
+}
+
+.marquee-right {
+	animation: marquee-right 10s linear infinite;
+}
+
+.marquee__inner:hover {
+	animation-play-state: paused;
+}
+
+.skillbox_container {
+	float: left;
+	height: 100%;
+}
+
+@keyframes marquee-left {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: var(--marquee-offset);
+	}
+}
+
+@keyframes marquee-right {
+	0% {
+		right: 0;
+	}
+	100% {
+		right: var(--marquee-offset);
+	}
 }
