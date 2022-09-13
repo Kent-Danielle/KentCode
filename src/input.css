@@ -54,7 +54,7 @@ body {
 
 @layer components {
 	.section {
-		@apply flex  min-h-screen w-full max-w-screen-2xl;
+		@apply flex min-h-screen w-full max-w-screen-2xl;
 	}
 
 	.nav__links {
