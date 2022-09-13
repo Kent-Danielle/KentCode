@@ -21,7 +21,9 @@
 	--dark-primary: hsla(240, 5%, 11%, 1);
 	--dark-primary-text: rgb(251, 250, 245);
 
-	--marquee-offset: -1372px;
+	--marquee-offset-1: -1372px;
+	--marquee-offset-2: -1372px;
+	--marquee-offset-3: -1372px;
 }
 
 @font-face {
@@ -44,6 +46,11 @@ body {
 	color: var(--light-primary-text);
 	min-height: 100vh;
 	overflow-x: hidden;
+}
+
+h1 {
+	font-family: Couture, sans-serif;
+	color: var(--light-carbon);
 }
 
 .section {
@@ -127,11 +134,6 @@ nav #logo {
 	color: var(--light-secondary-text);
 }
 
-#landing h1 {
-	font-family: Couture, sans-serif;
-	color: var(--light-carbon);
-}
-
 #landing h2 {
 	font-family: Couture, sans-serif;
 	color: var(--accent);
@@ -145,11 +147,6 @@ nav #logo {
 /* Projects */
 #projects {
 	background: var(--accent);
-}
-
-#projects h1 {
-	font-family: Couture, sans-serif;
-	color: var(--light-carbon);
 }
 
 /* Project Carousel */
@@ -270,9 +267,19 @@ div.carousel__slide img {
 /* Skills Carousel */
 .skillbox {
 	height: 100%;
-	background: #999;
-	display: inline-block;
 	transition: all 0.2s ease-out;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.skillbox img {
+	height: 100%;
+	max-width: 80%;
 }
 
 .skillbox:hover {
@@ -281,27 +288,7 @@ div.carousel__slide img {
 	cursor: pointer;
 }
 
-.red {
-	background: red;
-}
-.yellow {
-	background: yellow;
-}
-.blue {
-	background: blue;
-}
-.orange {
-	background: orange;
-}
-.purple {
-	background: purple;
-}
-.green {
-	background: green;
-}
-
 .marquee {
-	height: 200px;
 	width: 90%;
 	border: 2px solid #eee;
 	overflow: hidden;
@@ -315,12 +302,16 @@ div.carousel__slide img {
 	position: absolute;
 }
 
-.marquee-left {
-	animation: marquee-left 10s linear infinite;
+.marquee-1 {
+	animation: marquee-1 30s linear infinite;
 }
 
-.marquee-right {
-	animation: marquee-right 10s linear infinite;
+.marquee-2 {
+	animation: marquee-2 20s linear infinite;
+}
+
+.marquee-3 {
+	animation: marquee-3 20s linear infinite;
 }
 
 .marquee__inner:hover {
@@ -332,20 +323,29 @@ div.carousel__slide img {
 	height: 100%;
 }
 
-@keyframes marquee-left {
+@keyframes marquee-1 {
 	0% {
 		left: 0;
 	}
 	100% {
-		left: var(--marquee-offset);
+		left: var(--marquee-offset-1);
 	}
 }
 
-@keyframes marquee-right {
+@keyframes marquee-2 {
 	0% {
 		right: 0;
 	}
 	100% {
-		right: var(--marquee-offset);
+		right: var(--marquee-offset-2);
+	}
+}
+
+@keyframes marquee-3 {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: var(--marquee-offset-3);
 	}
 }

@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link href="dist/output.css" rel="stylesheet" />
+		<link rel="apple-touch-icon" sizes="180x180" href="src/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
 		<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
 		<title>Kent Concengco | Portfolio</title>
 	</head>
@@ -13,7 +17,7 @@
 		<div class="flex w-full flex-col items-center">
 			<!-- Navbar -->
 			<nav
-				class="fixed z-20 flex w-full items-center justify-end"
+				class="fixed z-20 flex w-full max-w-screen-2xl items-center justify-end"
 			>
 				<h1 id="logo" class="xl:mx-8 md:mx-6">KentCode</h1>
 				<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#projects">Projects</a>
@@ -136,42 +140,102 @@
 
 			<!-- Skills section -->
 			<div id="skills" class="section flex min-h-screen w-full max-w-screen-2xl flex-col justify-center items-center xl:px-14 md:px-8">
-				<div class="marquee">
-					<div class="marquee__inner marquee-left">
+				<h1 class="w-fit self-center pb-6 xl:text-6xl md:text-4xl">Skills</h1>
+
+				<div class="marquee xl:h-48 md:h-36">
+					<div class="marquee__inner marquee-1">
 						<span class="skillbox_container flex">
-							<div class="skillbox"></div>
-							<div class="skillbox red"></div>
-							<div class="skillbox yellow"></div>
-							<div class="skillbox blue"></div>
-							<div class="skillbox orange"></div>
-							<div class="skillbox purple"></div>
-							<div class="skillbox green"></div>
+							<div class="skillbox">
+								<img src="src/images/C.png" alt="C">
+							</div>
+							<div class="skillbox">
+								<img src="src/images/Python.png" alt="Python">
+							</div>
+							<div class="skillbox">
+								<img src="src/images/Java.png" alt="Java">
+							</div>
+							<div class="skillbox">
+								<img src="src/images/Javascript.png" alt="Javascript">
+							</div>
+							<div class="skillbox">
+								<img src="src/images/Arduino.png" alt="Ardunio">
+							</div>
+							<div class="skillbox">
+								<img src="src/images/Firebase.png" alt="Firebase">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Node.png" alt="Node.js">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Express.png" alt="Express.js">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/MongoDB.png" alt="MongoDB">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/MySQL.png" alt="MySQL">
+							</div>
 						</span>
 					</div>
 				</div>
-				<div class="marquee">
-					<div class="marquee__inner marquee-right">
+				<div class="marquee xl:h-48 md:h-36">
+					<div class="marquee__inner marquee-2">
 						<span class="skillbox_container flex">
-							<div class="skillbox"></div>
-							<div class="skillbox red"></div>
-							<div class="skillbox yellow"></div>
-							<div class="skillbox blue"></div>
-							<div class="skillbox orange"></div>
-							<div class="skillbox purple"></div>
-							<div class="skillbox green"></div>
+							<div class="skillbox">
+								<img src="src/images/HTML.png" alt="HTML">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/CSS.png" alt="CSS">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/React.png" alt="React">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Bootstrap.svg" alt="Bootstrap">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Tailwind.png" alt="Tailwind">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/jQuery.png" alt="jQuery">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/MUI.png" alt="Material UI">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Chakra.png" alt="Chakra UI">
+							</div>
+
 						</span>
 					</div>
 				</div>
-				<div class="marquee">
-					<div class="marquee__inner marquee-left">
+				<div class="marquee xl:h-48 md:h-36">
+					<div class="marquee__inner marquee-3">
 						<span class="skillbox_container flex">
-							<div class="skillbox"></div>
-							<div class="skillbox red"></div>
-							<div class="skillbox yellow"></div>
-							<div class="skillbox blue"></div>
-							<div class="skillbox orange"></div>
-							<div class="skillbox purple"></div>
-							<div class="skillbox green"></div>
+							<div class="skillbox">
+								<img src="src/images/VSCode.png" alt="VS Code">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Eclipse.png" alt="Eclipse">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/IntelliJ.png" alt="IntelliJ">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/PyCharm.png" alt="PyCharm">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Trello.png" alt="Trello">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Git.png" alt="Git">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/AdobeCC.png" alt="Adobe CC">
+							</div>
+							<div class="skillbox ">
+								<img src="src/images/Figma.svg" alt="Figma">
+							</div>
 						</span>
 					</div>
 				</div>
