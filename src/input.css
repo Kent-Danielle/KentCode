@@ -123,8 +123,14 @@ nav #logo {
 }
 
 #landing-text {
-	margin: 0 0 6rem;
 	width: fit-content;
+}
+
+#landing-img img {
+	max-width: 300px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
 }
 
 #landing p {
@@ -347,5 +353,12 @@ div.carousel__slide img {
 	}
 	100% {
 		left: var(--marquee-offset-3);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#landing-img img {
+		max-width: 500px;
+		max-height: 500px;
 	}
 }
