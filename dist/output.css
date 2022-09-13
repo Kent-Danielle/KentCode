@@ -574,7 +574,7 @@ video {
 @font-face {
   font-family: Couture;
 
-  src: url("../CantCode/src/fonts/couture-bld.otf");
+  src: url("../src/fonts/couture-bld.otf");
 }
 
 * {
