@@ -6,7 +6,6 @@ const root = document.querySelector(":root");
 const boxHeight = box[0].clientHeight;
 
 const setBoxWidth = (box) => {
-	console.log(box);
 	box.style.width = boxHeight + "px";
 };
 
@@ -29,5 +28,3 @@ root.style.setProperty(
 	"--marquee-offset",
 	"-" + marqueeInner[0].clientWidth / 2 + "px"
 );
-
-console.log(getComputedStyle(root).getPropertyValue("--marquee-offset"))
