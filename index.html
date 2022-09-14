@@ -1,250 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link href="dist/output.css" rel="stylesheet" />
-		<link rel="apple-touch-icon" sizes="180x180" href="src/images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
-		<title>Kent Concengco | Portfolio</title>
-	</head>
-	<body>
-		<div class="flex w-full flex-col items-center">
-			<!-- Navbar -->
-			<nav
-				class="fixed z-20 flex w-full max-w-screen-2xl items-center justify-end"
-			>
-				<h1 id="logo" class="xl:mx-8 md:mx-6">KentCode</h1>
-				<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#projects">Projects</a>
-				<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#skills">Skills</a>
-				<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#Projects">Contact</a>
-			</nav>
-			<!-- Hero section -->
-			<div id="landing" class="section flex min-h-screen w-full max-w-screen-2xl justify-around xl:px-14 md:px-8">
-				<div id="landing-text" class="flex flex-col justify-center">
-					<p class="xl:text-xl xl:mb-1 md:text-base">Hi, my name is</pc>
-					<h1 class="xl:text-7xl xl:leading-10 md:text-5xl md:leading-9">Kent Concengco</h1>
-					<h2 class="xl:mt-2 xl:text-3xl md:text-2xl">a software developer</h2>
-				</div>
-				<div id="landing-img" class="flex justify-center items-center">
-					<img src="src/images/Memoji.png" alt="Memoji">
-				</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="dist/output.css" rel="stylesheet" />
+	<link rel="apple-touch-icon" sizes="180x180" href="src/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+	<title>Kent Concengco | Portfolio</title>
+</head>
+
+<body>
+	<div class="flex w-full flex-col items-center">
+		<!-- Navbar -->
+		<nav class="fixed z-20 flex w-full max-w-screen-2xl items-center justify-end">
+			<h1 id="logo" class="xl:mx-8 md:mx-6">KentCode</h1>
+			<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#projects">Projects</a>
+			<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#skills">Skills</a>
+			<a class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg" href="#Projects">Contact</a>
+		</nav>
+		<!-- Hero section -->
+		<div id="landing" class="section flex min-h-screen w-full max-w-screen-2xl justify-around xl:px-14 md:px-8">
+			<div id="landing-text" class="flex flex-col justify-center">
+				<p class="xl:text-xl xl:mb-1 md:text-sm">Hi, my name is</p>
+				<h1 class="xl:text-7xl xl:leading-10 md:text-5xl md:leading-9">Kent Concengco</h1>
+				<h2 class="xl:mt-2 xl:text-3xl md:text-2xl">a software developer</h2>
+				<p class="xl:text-xl xl:mb-1 md:text-sm max-w-md ">with experience in research involving robotics, embedded systems, and
+					physical sciences, currently looking to jumpstart my career in the tech industry!</p>
 			</div>
+			<div id="landing-img" class="flex justify-center items-center">
+				<img src="src/images/Memoji.png" alt="Memoji">
+			</div>
+		</div>
 
-			<!-- Projects section -->
-			<div
-				id="projects"
-				class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-start justify-between pb-3 xl:px-14 xl:pt-8 md:pt-3 md:px-8"
-			>
-				<h1 class="w-fit self-center pb-6 xl:text-6xl md:text-4xl">Projects</h1>
+		<!-- Projects section -->
+		<div id="projects"
+			class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-start justify-between pb-3 xl:px-14 xl:pt-8 md:pt-3 md:px-8">
+			<h1 class="w-fit self-center pb-6 xl:text-6xl md:text-4xl">Projects</h1>
 
-				<div class="carousel relative w-full">
-					<button
-						id="carousel_button-left"
-						class="carousel__button absolute top-1/2 xl:-left-8 md:-left-5 z-10"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="2.5"
-							stroke="white"
-							class="h-6 w-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M15.75 19.5L8.25 12l7.5-7.5"
-							/>
-						</svg>
-					</button>
+			<div class="carousel relative w-full">
+				<button id="carousel_button-left" class="carousel__button absolute top-1/2 xl:-left-8 md:-left-5 z-10">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white"
+						class="h-6 w-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+					</svg>
+				</button>
 
-					<button
-						id="carousel_button-right"
-						class="carousel__button absolute top-1/2 xl:-right-8 md:-right-5 z-10"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="2.5"
-							stroke="white"
-							class="h-6 w-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M8.25 4.5l7.5 7.5-7.5 7.5"
-							/>
-						</svg>
-					</button>
+				<button id="carousel_button-right" class="carousel__button absolute top-1/2 xl:-right-8 md:-right-5 z-10">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white"
+						class="h-6 w-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+					</svg>
+				</button>
 
-					<div class="carousel__track-container relative w-full">
-						<div class="carousel__track h-fit w-full">
-							<!-- Breadventory -->
-							<div
-								class="carousel__slide current-slide flex h-fit w-full flex-row"
-							>
-								<div class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5">
-									<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">Breadventory</h2>
-									<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Deleniti temporibus impedit quibusdam perspiciatis dolore
-										sapiente? Distinctio dolorum dolorem, voluptates dignissimos
-										dicta id sit unde eligendi numquam! Id non quisquam
-										laudantium!
-									</p>
-									<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">Features</h3>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Feature 1</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Deleniti temporibus impedit quibusdam perspiciatis dolore
-										sapiente? Distinctio dolorum dolorem, voluptates dignissimos
-										dicta id sit unde eligendi numquam! Id non quisquam
-										laudantium!
-									</p>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Feature 1</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Deleniti temporibus impedit quibusdam perspiciatis dolore
-										sapiente? Distinctio dolorum dolorem, voluptates dignissimos
-										dicta id sit unde eligendi numquam! Id non quisquam
-										laudantium!
-									</p>
-								</div>
-
-								<div class="flex w-1/2 flex-col h-full items-center">
-									<img src="src/images/Breadventory_UI.png" alt="Breadventory UI">
-								</div>
-
+				<div class="carousel__track-container relative w-full">
+					<div class="carousel__track h-fit w-full">
+						<!-- Breadventory -->
+						<div class="carousel__slide current-slide h-fit w-full flex-row">
+							<div class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5">
+								<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">Breadventory</h2>
+								<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
+									A web app for managing the inventory and ordering process of bread in Langley Farm Market’s Deli
+									Department made using the MERN stack and Chakra UI for customization.
+								</p>
+								<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">Features</h3>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Automatic Ordering Sheet</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									To complete an order sheet, employees have to first check what breads are good or bad selling, then
+									cross-reference it to yesterday’s order before doing the actual order sheet. Breadventory solves this
+									by coming up an initial order sheet base on the sale status of the breads, saving the user a handful
+									of trips around the store.
+								</p>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Bread Managing Capabilities</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Breadventory allows the users to add and delete breads on the database, as well as being able to edit
+									existing breads. Our suppliers often changes their stocks and promotions, and this feature allows
+									Breadventory to be flexible in any real-world changes.
+								</p>
 							</div>
-							<!-- BuddyUp -->
 
-							<!-- FindaPotty -->
+							<div class="flex w-1/2 flex-col h-full items-center">
+								<img src="src/images/Breadventory_UI.png" alt="Breadventory UI">
+							</div>
 
-							<!-- Atlas -->
+						</div>
+						<!-- BuddyUp -->
+						<div class="carousel__slide h-fit w-full flex-row">
+							<div class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5">
+								<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">BuddyUp</h2>
+								<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
+									A chatroulette for gamers that has a profile feature where users can post their gaming stories. In
+									other words, Tinder but for gamers!
+								</p>
+								<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">Features</h3>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Gamer Profile</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Gamers can post their gaming stories in their profile page and other gamers can see it when they
+									matched. Aside from their login credentials, gamers can also add what games they play to increase the
+									chance of a good match!
+								</p>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Match ‘n Chat</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Before proceeding to the chatroom, gamers may add or remove games on their “game interests” before
+									going to the matching phase. When matched with another gamer, they will be able to see each other ‘s
+									profile and can choose to refuse or accept the match.
+								</p>
+							</div>
+
+							<div class="flex w-1/2 flex-col h-full items-center">
+								<img src="src/images/BuddyUp UI_iphone12promaxsilver_portrait.png" alt="BuddyUp UI">
+							</div>
+
+						</div>
+						<!-- FindaPotty -->
+						<div class="carousel__slide h-fit w-full flex-row">
+							<div class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5">
+								<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">FindaPotty</h2>
+								<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
+									A Yelp - inspired web app for sharing, rating, and reviewing washroom locations based on the theme of
+									“Winter Olympics at Vancouver”, powered by Firebase and designed with Bootstrap 5.
+								</p>
+								<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">Features</h3>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Post-a-Potty</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Users can share and rate a potty location along with a description of its features, and how can it be
+									located from a certain landmark.
+								</p>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Rate-a-Potty</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Users can also add ratings and reviews to other potties by clicking a potty location and navigating to
+									the reviews tab.
+								</p>
+							</div>
+
+							<div class="flex w-1/2 flex-col h-full items-center">
+								<img src="src/images/Findapotty UI_iphone12promaxsilver_portrait.png" alt="FindaPotty UI">
+							</div>
+
+						</div>
+						<!-- Atlas -->
+						<div class="carousel__slide h-fit w-full flex-row">
+							<div class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5">
+								<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">Atlas</h2>
+								<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
+									A Yelp - inspired web app for sharing, rating, and reviewing washroom locations based on the theme of
+									“Winter Olympics at Vancouver”, powered by Firebase and designed with Bootstrap 5.
+								</p>
+								<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">Features</h3>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Post-a-Potty</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Users can share and rate a potty location along with a description of its features, and how can it be
+									located from a certain landmark.
+								</p>
+								<h4 class="w-fit md:text-lg xl:text-2xl">Rate-a-Potty</h4>
+								<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									Users can also add ratings and reviews to other potties by clicking a potty location and navigating to
+									the reviews tab.
+								</p>
+							</div>
+
+							<div class="flex w-1/2 flex-col h-full items-center">
+								<img src="src/images/apple-iphone12promax-silver-portrait.png" alt="Atlas Demo">
+							</div>
 
 						</div>
 					</div>
 				</div>
-
-				<div class="carousel__nav self-center">
-					<button class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4 current-slide"></button
-					><button class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button
-					><button class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button>
-					<button class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button>
-				</div>
 			</div>
 
-			<!-- Skills section -->
-			<div id="skills" class="section flex min-h-screen w-full max-w-screen-2xl flex-col justify-center items-center xl:px-14 md:px-8">
-				<h1 class="w-fit self-center pb-6 xl:text-6xl md:text-4xl">Skills</h1>
+			<div class="carousel__nav self-center">
+				<button
+					class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4 current-slide"></button><button
+					class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button><button
+					class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button>
+				<button class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"></button>
+			</div>
+		</div>
 
-				<div class="marquee xl:h-48 md:h-36">
-					<div class="marquee__inner marquee-1">
-						<span class="skillbox_container flex">
-							<div class="skillbox">
-								<img src="src/images/C.png" alt="C">
-							</div>
-							<div class="skillbox">
-								<img src="src/images/Python.png" alt="Python">
-							</div>
-							<div class="skillbox">
-								<img src="src/images/Java.png" alt="Java">
-							</div>
-							<div class="skillbox">
-								<img src="src/images/Javascript.png" alt="Javascript">
-							</div>
-							<div class="skillbox">
-								<img src="src/images/Arduino.png" alt="Ardunio">
-							</div>
-							<div class="skillbox">
-								<img src="src/images/Firebase.png" alt="Firebase">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Node.png" alt="Node.js">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Express.png" alt="Express.js">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/MongoDB.png" alt="MongoDB">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/MySQL.png" alt="MySQL">
-							</div>
-						</span>
-					</div>
-				</div>
-				<div class="marquee xl:h-48 md:h-36">
-					<div class="marquee__inner marquee-2">
-						<span class="skillbox_container flex">
-							<div class="skillbox">
-								<img src="src/images/HTML.png" alt="HTML">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/CSS.png" alt="CSS">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/React.png" alt="React">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Bootstrap.svg" alt="Bootstrap">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Tailwind.png" alt="Tailwind">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/jQuery.png" alt="jQuery">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/MUI.png" alt="Material UI">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Chakra.png" alt="Chakra UI">
-							</div>
+		<!-- Skills section -->
+		<div id="skills"
+			class="section flex min-h-screen w-full max-w-screen-2xl flex-col justify-center items-center xl:px-14 md:px-8">
+			<h1 class="w-fit self-center pb-6 xl:text-6xl md:text-4xl">Skills</h1>
 
-						</span>
-					</div>
+			<div class="marquee xl:h-48 md:h-36">
+				<div class="marquee__inner marquee-1">
+					<span class="skillbox_container flex">
+						<div class="skillbox">
+							<img src="src/images/C.png" alt="C">
+						</div>
+						<div class="skillbox">
+							<img src="src/images/Python.png" alt="Python">
+						</div>
+						<div class="skillbox">
+							<img src="src/images/Java.png" alt="Java">
+						</div>
+						<div class="skillbox">
+							<img src="src/images/Javascript.png" alt="Javascript">
+						</div>
+						<div class="skillbox">
+							<img src="src/images/Arduino.png" alt="Ardunio">
+						</div>
+						<div class="skillbox">
+							<img src="src/images/Firebase.png" alt="Firebase">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Node.png" alt="Node.js">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Express.png" alt="Express.js">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/MongoDB.png" alt="MongoDB">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/MySQL.png" alt="MySQL">
+						</div>
+					</span>
 				</div>
-				<div class="marquee xl:h-48 md:h-36">
-					<div class="marquee__inner marquee-3">
-						<span class="skillbox_container flex">
-							<div class="skillbox">
-								<img src="src/images/VSCode.png" alt="VS Code">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Eclipse.png" alt="Eclipse">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/IntelliJ.png" alt="IntelliJ">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/PyCharm.png" alt="PyCharm">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Trello.png" alt="Trello">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Git.png" alt="Git">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/AdobeCC.png" alt="Adobe CC">
-							</div>
-							<div class="skillbox ">
-								<img src="src/images/Figma.svg" alt="Figma">
-							</div>
-						</span>
-					</div>
+			</div>
+			<div class="marquee xl:h-48 md:h-36">
+				<div class="marquee__inner marquee-2">
+					<span class="skillbox_container flex">
+						<div class="skillbox">
+							<img src="src/images/HTML.png" alt="HTML">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/CSS.png" alt="CSS">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/React.png" alt="React">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Bootstrap.svg" alt="Bootstrap">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Tailwind.png" alt="Tailwind">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/jQuery.png" alt="jQuery">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/MUI.png" alt="Material UI">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Chakra.png" alt="Chakra UI">
+						</div>
+
+					</span>
+				</div>
+			</div>
+			<div class="marquee xl:h-48 md:h-36">
+				<div class="marquee__inner marquee-3">
+					<span class="skillbox_container flex">
+						<div class="skillbox">
+							<img src="src/images/VSCode.png" alt="VS Code">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Eclipse.png" alt="Eclipse">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/IntelliJ.png" alt="IntelliJ">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/PyCharm.png" alt="PyCharm">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Trello.png" alt="Trello">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Git.png" alt="Git">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/AdobeCC.png" alt="Adobe CC">
+						</div>
+						<div class="skillbox ">
+							<img src="src/images/Figma.svg" alt="Figma">
+						</div>
+					</span>
 				</div>
 			</div>
 		</div>
-		<script src="src/js/carousel.js"></script>
-		<script src="src/js/marquee.js"></script>
-	</body>
+	</div>
+	<script src="src/js/carousel.js"></script>
+	<script src="src/js/marquee.js"></script>
+</body>
+
 </html>
