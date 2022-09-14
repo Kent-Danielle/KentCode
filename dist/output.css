@@ -668,6 +668,11 @@ nav #logo {
   background: var(--accent);
 }
 
+#projects iframe {
+  width: 100%;
+  min-height: 30rem;
+}
+
 /* Project Carousel */
 
 @-webkit-keyframes enterRight {
