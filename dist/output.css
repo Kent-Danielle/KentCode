@@ -604,6 +604,10 @@ h1 {
   box-sizing: border-box;
 }
 
+.hidden-project {
+  display: none !important;
+}
+
 /* Navbar */
 
 nav {
@@ -827,7 +831,33 @@ button.current-slide {
 }
 
 div.carousel__slide img {
-  height: calc(100vh - 8rem);
+  max-height: calc(100vh - 8rem);
+}
+
+.carousel__slide-text,
+.carousel__slide-img {
+  -webkit-animation: carousel__slide-toggle 0.3s ease-in;
+          animation: carousel__slide-toggle 0.3s ease-in;
+}
+
+@-webkit-keyframes carousel__slide-toggle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes carousel__slide-toggle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 #projects h2,
@@ -843,6 +873,16 @@ div.carousel__slide img {
 
 #projects p {
   color: var(--light-primary);
+}
+
+#projects .project-peek-btn {
+  font-family: Couture, sans-serif;
+  color: var(--light-primary);
+  background-color: var(--light-carbon);
+}
+
+#projects .project-peek-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Skills */
@@ -870,7 +910,6 @@ div.carousel__slide img {
 
 .skillbox:hover {
   transform: scale(1.2);
-  opacity: 0.5;
   cursor: pointer;
 }
 

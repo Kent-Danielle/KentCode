@@ -54,36 +54,48 @@
 			<!-- Hero section -->
 			<div
 				id="landing"
-				class="section flex min-h-screen w-full max-w-screen-2xl justify-around md:px-8 xl:px-14"
+				class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-center justify-center px-8 md:flex-row md:justify-around xl:px-12"
 			>
-				<div id="landing-text" class="flex flex-col justify-center">
+				<div
+					id="landing-img"
+					class="order-2 flex items-center justify-center md:order-1"
+				>
+					<img src="src/images/Memoji.png" alt="Memoji" />
+				</div>
+				<div
+					id="landing-text"
+					class="order-1 flex flex-col justify-center md:order-2"
+				>
 					<p class="md:text-sm xl:mb-1 xl:text-xl">Hi, my name is</p>
-					<h1 class="md:text-5xl md:leading-9 xl:text-7xl xl:leading-10">
+					<h1
+						class="text-3xl leading-8 md:text-5xl md:leading-9 xl:text-7xl xl:leading-10"
+					>
 						Kent Concengco
 					</h1>
-					<h2 class="md:text-2xl xl:mt-2 xl:text-3xl">a software developer</h2>
+					<h2 class="text-xl md:text-2xl xl:mt-2 xl:text-3xl">
+						a software developer
+					</h2>
 					<p class="max-w-md md:text-sm xl:mb-1 xl:text-xl">
 						with experience in research involving robotics, embedded systems,
 						and physical sciences, currently looking to jumpstart my career in
 						the tech industry!
 					</p>
 				</div>
-				<div id="landing-img" class="flex items-center justify-center">
-					<img src="src/images/Memoji.png" alt="Memoji" />
-				</div>
 			</div>
 
 			<!-- Projects section -->
 			<div
 				id="projects"
-				class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-start justify-between pb-3 md:px-8 md:pt-3 xl:px-14 xl:pt-8"
+				class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-start justify-between px-8 pb-3 pt-7 xl:px-14 xl:pt-8"
 			>
-				<h1 class="w-fit self-center pb-6 md:text-4xl xl:text-6xl">Projects</h1>
+				<h1 class="w-fit self-center pb-6 text-3xl md:text-4xl xl:text-6xl">
+					Projects
+				</h1>
 
 				<div class="carousel relative w-full">
 					<button
 						id="carousel_button-left"
-						class="carousel__button absolute top-1/2 z-10 md:-left-5 xl:-left-8"
+						class="carousel__button absolute top-1/2 -left-8 z-10 md:-left-5 xl:-left-8"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +115,7 @@
 
 					<button
 						id="carousel_button-right"
-						class="carousel__button absolute top-1/2 z-10 md:-right-5 xl:-right-8"
+						class="carousel__button absolute top-1/2 -right-8 z-10 md:-right-5 xl:-right-8"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -124,11 +136,15 @@
 					<div class="carousel__track-container relative w-full">
 						<div class="carousel__track h-fit w-full">
 							<!-- Breadventory -->
-							<div class="carousel__slide current-slide h-fit w-full flex-row">
+							<div
+								class="carousel__slide current-slide h-fit w-full flex-col md:flex-row"
+							>
 								<div
-									class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5"
+									class="carousel__slide-text flex h-fit flex-col items-start md:w-1/2 md:px-4 xl:py-6 xl:px-5"
 								>
-									<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">
+									<h2
+										class="w-fit pb-1 text-xl md:text-3xl xl:pb-3 xl:text-4xl"
+									>
 										Breadventory
 									</h2>
 									<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
@@ -136,13 +152,15 @@
 										bread in Langley Farm Market’s Deli Department made using
 										the MERN stack and Chakra UI for customization.
 									</p>
-									<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">
+									<h3 class="w-fit text-xl md:text-2xl xl:pb-3 xl:text-3xl">
 										Features
 									</h3>
-									<h4 class="w-fit md:text-lg xl:text-2xl">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
 										Automatic Ordering Sheet
 									</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										To complete an order sheet, employees have to first check
 										what breads are good or bad selling, then cross-reference it
 										to yesterday’s order before doing the actual order sheet.
@@ -150,10 +168,12 @@
 										base on the sale status of the breads, saving the user a
 										handful of trips around the store.
 									</p>
-									<h4 class="w-fit md:text-lg xl:text-2xl">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
 										Bread Managing Capabilities
 									</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										Breadventory allows the users to add and delete breads on
 										the database, as well as being able to edit existing breads.
 										Our suppliers often changes their stocks and promotions, and
@@ -162,7 +182,9 @@
 									</p>
 								</div>
 
-								<div class="flex h-full w-1/2 flex-col items-center">
+								<div
+									class="carousel__slide-img hidden-project m:w-1/2 flex h-full flex-col items-center justify-center"
+								>
 									<img
 										src="src/images/Breadventory_UI.png"
 										alt="Breadventory UI"
@@ -170,11 +192,13 @@
 								</div>
 							</div>
 							<!-- BuddyUp -->
-							<div class="carousel__slide h-fit w-full flex-row">
+							<div class="carousel__slide h-fit w-full flex-col md:flex-row">
 								<div
-									class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5"
+									class="carousel__slide-text flex h-fit flex-col items-start md:w-1/2 md:px-4 xl:py-6 xl:px-5"
 								>
-									<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">
+									<h2
+										class="w-fit pb-1 text-xl md:text-3xl xl:pb-3 xl:text-4xl"
+									>
 										BuddyUp
 									</h2>
 									<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
@@ -182,18 +206,26 @@
 										users can post their gaming stories. In other words, Tinder
 										but for gamers!
 									</p>
-									<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">
+									<h3 class="w-fit text-xl md:text-2xl xl:pb-3 xl:text-3xl">
 										Features
 									</h3>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Gamer Profile</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
+										Gamer Profile
+									</h4>
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										Gamers can post their gaming stories in their profile page
 										and other gamers can see it when they matched. Aside from
 										their login credentials, gamers can also add what games they
 										play to increase the chance of a good match!
 									</p>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Match ‘n Chat</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
+										Match ‘n Chat
+									</h4>
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										Before proceeding to the chatroom, gamers may add or remove
 										games on their “game interests” before going to the matching
 										phase. When matched with another gamer, they will be able to
@@ -202,7 +234,9 @@
 									</p>
 								</div>
 
-								<div class="flex h-full w-1/2 flex-col items-center">
+								<div
+									class="carousel__slide-img hidden-project m:w-1/2 flex h-full flex-col items-center justify-center"
+								>
 									<img
 										src="src/images/BuddyUp UI_iphone12promaxsilver_portrait.png"
 										alt="BuddyUp UI"
@@ -210,11 +244,13 @@
 								</div>
 							</div>
 							<!-- FindaPotty -->
-							<div class="carousel__slide h-fit w-full flex-row">
+							<div class="carousel__slide h-fit w-full flex-col md:flex-row">
 								<div
-									class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5"
+									class="carousel__slide-text flex h-fit flex-col items-start md:w-1/2 md:px-4 xl:py-6 xl:px-5"
 								>
-									<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">
+									<h2
+										class="w-fit pb-1 text-xl md:text-3xl xl:pb-3 xl:text-4xl"
+									>
 										FindaPotty
 									</h2>
 									<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
@@ -223,23 +259,33 @@
 										Vancouver”, powered by Firebase and designed with Bootstrap
 										5.
 									</p>
-									<h3 class="w-fit md:text-2xl xl:pb-3 xl:text-3xl">
+									<h3 class="w-fit text-xl md:text-2xl xl:pb-3 xl:text-3xl">
 										Features
 									</h3>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Post-a-Potty</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
+										Post-a-Potty
+									</h4>
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										Users can share and rate a potty location along with a
 										description of its features, and how can it be located from
 										a certain landmark.
 									</p>
-									<h4 class="w-fit md:text-lg xl:text-2xl">Rate-a-Potty</h4>
-									<p class="md:pb-1 md:text-sm xl:pb-4 xl:text-lg">
+									<h4 class="text-md w-fit md:text-lg xl:text-2xl">
+										Rate-a-Potty
+									</h4>
+									<p
+										class="pb-2 text-sm leading-6 md:leading-normal xl:pb-4 xl:text-lg"
+									>
 										Users can also add ratings and reviews to other potties by
 										clicking a potty location and navigating to the reviews tab.
 									</p>
 								</div>
 
-								<div class="flex h-full w-1/2 flex-col items-center">
+								<div
+									class="carousel__slide-img hidden-project m:w-1/2 flex h-full flex-col items-center justify-center"
+								>
 									<img
 										src="src/images/Findapotty UI_iphone12promaxsilver_portrait.png"
 										alt="FindaPotty UI"
@@ -247,11 +293,13 @@
 								</div>
 							</div>
 							<!-- Atlas -->
-							<div class="carousel__slide h-fit w-full flex-row">
+							<div class="carousel__slide h-fit w-full flex-col md:flex-row">
 								<div
-									class="flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5"
+									class="carousel__slide-text flex h-fit flex-col items-start md:w-1/2 md:px-4 xl:py-6 xl:px-5"
 								>
-									<h2 class="w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl">
+									<h2
+										class="w-fit pb-1 text-xl md:text-3xl xl:pb-3 xl:text-4xl"
+									>
 										Atlas
 									</h2>
 									<p class="md:pb-4 md:text-base xl:pb-6 xl:text-xl">
@@ -272,8 +320,9 @@
 									</p>
 								</div>
 
+
 								<div
-									class="flex h-full w-1/2 flex-col items-center justify-center"
+									class="carousel__slide-img hidden-project m:w-1/2 flex h-full flex-col items-center justify-center"
 								>
 									<iframe
 										src="https://www.youtube.com/embed/NJ8Lq3SZ7nA"
@@ -288,18 +337,24 @@
 					</div>
 				</div>
 
+				<button
+					class="project-peek-btn mt-8 mb-5 self-center rounded-lg py-1 px-2 md:hidden"
+				>
+					Take a look!
+				</button>
+
 				<div class="carousel__nav self-center">
 					<button
-						class="carousel__indicator current-slide mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"
+						class="carousel__indicator current-slide mx-2 h-3 w-3 rounded-full opacity-40 xl:h-4 xl:w-4"
 					></button
 					><button
-						class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"
+						class="carousel__indicator mx-2 h-3 w-3 rounded-full opacity-40 xl:h-4 xl:w-4"
 					></button
 					><button
-						class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"
+						class="carousel__indicator mx-2 h-3 w-3 rounded-full opacity-40 xl:h-4 xl:w-4"
 					></button>
 					<button
-						class="carousel__indicator mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4"
+						class="carousel__indicator mx-2 h-3 w-3 rounded-full opacity-40 xl:h-4 xl:w-4"
 					></button>
 				</div>
 			</div>
@@ -307,11 +362,13 @@
 			<!-- Skills section -->
 			<div
 				id="skills"
-				class="section flex min-h-screen w-full max-w-screen-2xl flex-col items-center justify-center md:px-8 xl:px-14"
+				class="section flex min-h-fit w-full max-w-screen-2xl flex-col items-center justify-center py-11 md:px-8 xl:px-14"
 			>
-				<h1 class="w-fit self-center pb-6 md:text-4xl xl:text-6xl">Skills</h1>
+				<h1 class="w-fit self-center pb-6 text-3xl md:text-4xl xl:text-6xl">
+					Skills
+				</h1>
 
-				<div class="marquee md:h-36 xl:h-48">
+				<div class="marquee h-32 md:h-36 xl:h-48">
 					<div class="marquee__inner marquee-1">
 						<span class="skillbox_container flex">
 							<div class="skillbox">
@@ -347,7 +404,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="marquee md:h-36 xl:h-48">
+				<div class="marquee h-32 md:h-36 xl:h-48">
 					<div class="marquee__inner marquee-2">
 						<span class="skillbox_container flex">
 							<div class="skillbox">
@@ -377,7 +434,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="marquee md:h-36 xl:h-48">
+				<div class="marquee h-32 md:h-36 xl:h-48">
 					<div class="marquee__inner marquee-3">
 						<span class="skillbox_container flex">
 							<div class="skillbox">

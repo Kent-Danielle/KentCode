@@ -59,42 +59,8 @@ h1 {
 	box-sizing: border-box;
 }
 
-@layer components {
-	.section {
-		@apply flex min-h-screen w-full max-w-screen-2xl;
-	}
-
-	.nav__links {
-		@apply font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg;
-	}
-
-	.carousel__indicator {
-		@apply mx-2 rounded-full opacity-40 md:h-3 md:w-3 xl:h-4 xl:w-4;
-	}
-
-	.carousel__slide-text {
-		@apply flex h-fit w-1/2 flex-col items-start md:px-4 xl:py-6 xl:px-5;
-	}
-
-	.carousel__slide-text h2 {
-		@apply w-fit md:pb-1 md:text-3xl xl:pb-3 xl:text-4xl;
-	}
-
-	.carousel__slide-text h2 + p {
-		@apply md:pb-4 md:text-base xl:pb-6 xl:text-xl;
-	}
-
-	.carousel__slide-text h3 {
-		@apply w-fit md:text-2xl xl:pb-3 xl:text-3xl;
-	}
-
-	.carousel__slide-text h4 {
-		@apply w-fit md:text-lg xl:text-2xl;
-	}
-
-	.carousel__slide-text h4 + p {
-		@apply md:pb-1 md:text-sm xl:pb-4 xl:text-lg;
-	}
+.hidden-project {
+	display: none !important;
 }
 
 /* Navbar */
@@ -253,7 +219,21 @@ button.current-slide {
 }
 
 div.carousel__slide img {
-	height: calc(100vh - 8rem);
+	max-height: calc(100vh - 8rem);
+}
+
+.carousel__slide-text,
+.carousel__slide-img {
+	animation: carousel__slide-toggle 0.3s ease-in;
+}
+
+@keyframes carousel__slide-toggle {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
 
 #projects h2,
@@ -268,6 +248,16 @@ div.carousel__slide img {
 
 #projects p {
 	color: var(--light-primary);
+}
+
+#projects .project-peek-btn {
+	font-family: Couture, sans-serif;
+	color: var(--light-primary);
+	background-color: var(--light-carbon);
+}
+
+#projects .project-peek-btn:hover {
+	transform: scale(1.1);
 }
 
 /* Skills */
@@ -295,7 +285,6 @@ div.carousel__slide img {
 
 .skillbox:hover {
 	transform: scale(1.2);
-	opacity: 0.5;
 	cursor: pointer;
 }
 
