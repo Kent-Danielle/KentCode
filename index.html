@@ -23,6 +23,10 @@
 			sizes="16x16"
 			href="src/images/favicon-16x16.png"
 		/>
+		<script
+			src="https://kit.fontawesome.com/bd8f785704.js"
+			crossorigin="anonymous"
+		></script>
 		<link rel="manifest" href="/site.webmanifest" />
 		<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
 		<title>Kent Concengco | Portfolio</title>
@@ -31,22 +35,23 @@
 	<body>
 		<div class="flex w-full flex-col items-center">
 			<!-- Navbar -->
-			<nav
-				class="fixed z-20 flex w-full max-w-screen-2xl items-center justify-end"
-			>
-				<h1 id="logo" class="md:mx-6 xl:mx-8">KentCode</h1>
+			<nav id="nav" class="relative z-20 w-full max-w-screen-2xl px-6">
+				<h1 id="logo" class="w-full md:mx-6 md:w-fit xl:mx-8">KentCode</h1>
+				<a href="" class="hamburger" id="nav-btn">
+					<i class="fa-solid fa-bars float-right my-auto md:hidden"></i>
+				</a>
 				<a
-					class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg"
+					class="hidden font-semibold md:mx-4 md:block md:text-base xl:my-0 xl:mx-8 xl:text-lg"
 					href="#projects"
 					>Projects</a
 				>
 				<a
-					class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg"
+					class="hidden font-semibold md:mx-4 md:block md:text-base xl:my-0 xl:mx-8 xl:text-lg"
 					href="#skills"
 					>Skills</a
 				>
 				<a
-					class="font-semibold md:mx-4 md:text-base xl:my-0 xl:mx-8 xl:text-lg"
+					class="hidden font-semibold md:mx-4 md:block md:text-base xl:my-0 xl:mx-8 xl:text-lg"
 					href="#Projects"
 					>Contact</a
 				>
@@ -470,6 +475,7 @@
 				<p>Kent Concengco © 2022</p>
 			</footer>
 		</div>
+		<script src="src/js/navbar.js"></script>
 		<script src="src/js/carousel.js"></script>
 		<script src="src/js/marquee.js"></script>
 	</body>

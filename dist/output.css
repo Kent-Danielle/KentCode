@@ -612,12 +612,20 @@ nav {
 
 nav a {
   font-family: Couture, sans-serif;
+  float: right;
 }
 
 nav #logo {
   font-family: Couture, sans-serif;
   font-size: 1.2rem;
-  margin-right: auto;
+  display: block;
+  float: left;
+}
+
+nav .hamburger {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.3rem;
 }
 
 /* Landing page */
@@ -1018,5 +1026,21 @@ div.carousel__slide img {
 @media only screen and (max-width: 767px) {
   .hidden-project {
     display: none !important;
+  }
+
+  nav.responsive {
+    position: relative;
+  }
+
+  /* nav.responsive  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
