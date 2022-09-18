@@ -70,6 +70,7 @@ nav a {
 }
 
 nav #logo {
+	color: var(--light-primary-text) !important;
 	font-family: Couture, sans-serif;
 	font-size: 1.2rem;
 	display: block;
@@ -79,10 +80,28 @@ nav #logo {
 nav .hamburger {
 	position: absolute;
 	right: 1.5rem;
-  top: 0.3rem;
+	top: 0.3rem;
 }
 
 /* Landing page */
+
+#landing .resume_btn {
+	opacity: 80%;
+	color: var(--light-primary);
+	background: var(--light-carbon);
+}
+#landing .resume_btn:hover {
+	opacity: 100%;
+}
+
+#landing .socmed_icon {
+	color: var(--accent);
+	width: fit-content;
+	height: fit-content;
+}
+#landing .socmed_icon:hover {
+	color: var(--light-carbon);
+}
 
 #landing {
 	background-color: var(--light-primary);
@@ -366,15 +385,17 @@ div.carousel__slide img {
 		display: none !important;
 	}
 
-	nav.responsive {position: relative;}
-  /* nav.responsive  {
+	nav.responsive {
+		position: relative;
+	}
+	/* nav.responsive  {
     position: absolute;
     right: 0;
     top: 0;
   } */
-  nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+	nav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
 }

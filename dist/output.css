@@ -616,6 +616,7 @@ nav a {
 }
 
 nav #logo {
+  color: var(--light-primary-text) !important;
   font-family: Couture, sans-serif;
   font-size: 1.2rem;
   display: block;
@@ -629,6 +630,30 @@ nav .hamburger {
 }
 
 /* Landing page */
+
+#landing .resume_btn {
+  opacity: 80%;
+  color: var(--light-primary);
+  background: var(--light-carbon);
+}
+
+#landing .resume_btn:hover {
+  opacity: 100%;
+}
+
+#landing .socmed_icon {
+  color: var(--accent);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#landing .socmed_icon:hover {
+  color: var(--light-carbon);
+}
 
 #landing {
   background-color: var(--light-primary);
